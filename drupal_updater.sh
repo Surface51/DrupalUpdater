@@ -24,8 +24,8 @@ main()
         command -v "$cmd" > /dev/null || { echo "Missing required command: $cmd" >&2; return 1; }
     done
 
-    if [[ ! -f composer.json || ! -f composer.lock ]]; then
-        echo "No composer.json/composer.lock in $(pwd)" >&2
+    if [[ ! -f composer.lock ]]; then
+        echo "No composer.lock in $(pwd)" >&2
         return 1
     fi
 
